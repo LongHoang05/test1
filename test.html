@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToCoToCo - Trà Sữa Ngon Chuẩn Vị Việt</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/toco-grid.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="ToCoToCo - Thương hiệu trà sữa hàng đầu Việt Nam. Khám phá menu đa dạng, ưu đãi hấp dẫn, và câu chuyện thành công đằng sau thương hiệu ToCoToCo."
+    />
+    <link rel="icon" type="image/png" href="assets/imgs/favicon.png" />
+
+    <style>
+      @import "header.css";
+      @import "footer.css";
+
+      /* ========== HOME ========== */
+      .home {
+        padding-bottom: 50px;
+      }
+
+      .banner,
+      .news {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .home__hero {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .home__hero-slider {
+        display: flex;
+        width: 100%;
+      }
+
+      .home__hero-slide {
+        padding-top: 56%;
+        flex: 0 0 100%;
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .hero-prev,
+      .hero-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        border: none;
+        padding: 20px 15px;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      .hero-prev:hover,
+      .hero-next:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .hero-prev {
+        left: 20px;
+      }
+      .hero-next {
+        right: 20px;
+      }
+
+      .home__hero-img {
+        width: 100%;
+      }
+
+      .home__hero-btn {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+        color: white;
+      }
+
+      .home__hero-btn a {
+        border: 2px solid white;
+        padding: 12px 46px;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: white;
+      }
+
+      .home__hero-btn a:hover {
+        background-color: #d3b673;
+        border: 2px solid transparent;
+      }
+
+      .home__hero-btn i {
+        font-size: 2rem;
+      }
+
+      .home__hero-btn p {
+        font-size: 1.4rem;
+      }
+
+      /* ========== PRODUCT ========== */
+      .product {
+        padding-top: 50px;
+      }
+
+      .product__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 30px;
+      }
+
+      .product__subtitle {
+        font-size: 2.2rem;
+        color: #d3b673;
+      }
+
+      .product__heading {
+        font-size: 3.6rem;
+      }
+
+      .product__line {
+        width: 35%;
+      }
+
+      .product__list {
+        width: 80%;
+        margin: 50px auto;
+      }
+
+      .product__card {
+        margin-bottom: 32px;
+      }
+
+      .product__card-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding-top: 32px;
+        background-color: #f5f5f5f5;
+        box-shadow: 0px 2px 1.5px 0px #ccc;
+      }
+
+      .product__card img {
+        width: 100%;
+      }
+
+      .product__name {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      .product__price {
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .product__price--origin {
+        color: #d3b673;
+        font-weight: 600;
+      }
+
+      .product__price--sale {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-decoration: line-through;
+      }
+
+      .product__btn,
+      .product__list-btn {
+        font-size: 1.6rem;
+        padding: 12px 20px;
+        color: white;
+        border: 1px solid transparent;
+        background-color: #d3b673;
+        cursor: pointer;
+      }
+
+      .product__btn:hover,
+      .product__list-btn:hover {
+        border: 1px solid #d3b673;
+        color: #d3b673;
+        background-color: transparent;
+      }
+
+      .product__list-btn {
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* ========== BANNER ========== */
+      .banner__item {
+        position: relative;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .banner__item img {
+        width: 100%;
+        border: 1px solid #d3b673;
+      }
+
+      .banner__info {
+        position: absolute;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+      }
+
+      .banner__info--right {
+        right: 5%;
+        top: 30%;
+        color: white;
+      }
+
+      .banner__info--left {
+        left: 5%;
+        top: 30%;
+        color: black;
+      }
+
+      .banner__subtitle {
+        color: #d3b673;
+        font-size: 2.2rem;
+      }
+
+      .banner__title {
+        font-size: 3.6rem;
+      }
+
+      .banner__desc {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+      }
+
+      .banner__btn {
+        font-size: 1.6rem;
+        padding: 12px 20px;
+        color: white;
+        border: 1px solid transparent;
+        background-color: #d3b673;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+
+      .banner__btn:hover {
+        border: 1px solid #d3b673;
+        color: #d3b673;
+        background-color: transparent;
+      }
+
+      /* ========== NEWS ========== */
+      .news__main {
+        display: flex;
+        gap: 32px;
+      }
+
+      .news__col {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .news__latest {
+        background-color: #f5f5f5f5;
+      }
+
+      .news__latest a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .news__latest img {
+        width: 100%;
+      }
+
+      .news__content {
+        padding: 16px;
+        font-size: 1.4rem;
+      }
+
+      .news__content p {
+        margin-top: 36px;
+        line-height: 2rem;
+      }
+
+      .news__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .news__item {
+        width: calc(50% - 10px);
+        background-color: #f5f5f5f5;
+      }
+
+      .news__item a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .news__item img {
+        width: 100%;
+        height: 153px;
+      }
+
+      .news__list--right {
+        list-style: none;
+      }
+
+      .news__item--right {
+        display: flex;
+        padding-bottom: 20px;
+      }
+
+      .news__item--right-content {
+        font-size: 1.6rem;
+        margin-left: 12px;
+        line-height: 2.4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      @media (max-width: 1023px) {
+        .banner__info--left,
+        .banner__info--right {
+          top: 15%;
+        }
+
+        .product__title {
+          gap: 25px;
+        }
+
+        .product__heading {
+          width: 400px;
+          text-align: center;
+          font-size: 2.6rem;
+          line-height: 2.8rem;
+        }
+
+        .news__main {
+          flex-direction: column;
+        }
+
+        .news__col {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 739px) {
+        .banner__info {
+          width: 40%;
+          gap: 15px;
+        }
+        .banner__subtitle {
+          font-size: 1.4rem;
+        }
+
+        .banner__title {
+          font-size: 2rem;
+        }
+        .banner__desc {
+          font-size: 0.8rem;
+          line-height: 1.2rem;
+        }
+        .banner__btn {
+          font-size: 1rem;
+          padding: 6px 12px;
+        }
+        .product__heading {
+          font-size: 2.6rem;
+          line-height: 2.8rem;
+        }
+
+        .product__line {
+          width: 95%;
+        }
+      }
+
+      @media (min-width: 740px) and (max-width: 1023px) {
+        .product__line {
+          width: 60%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header"></header>
+
+    <main class="home">
+      <!-- Hero -->
+
+      <section class="home__hero">
+        <div class="home__hero-slider">
+          <div
+            class="home__hero-slide"
+            style="background-image: url('assets/imgs/WEBSITE-1.jpg')"
+          ></div>
+          <div
+            class="home__hero-slide"
+            style="background-image: url('bigorther.jpg')"
+          ></div>
+          <div
+            class="home__hero-slide"
+            style="background-image: url('banner-web.jpg')"
+          ></div>
+        </div>
+
+        <div class="home__hero-btn">
+          <a href="#">CHI TIẾT</a>
+          <i class="fa-solid fa-computer-mouse"></i>
+          <p>Cuộn xuống</p>
+        </div>
+
+        <button class="hero-prev">❮</button>
+        <button class="hero-next">❯</button>
+      </section>
+
+      <!-- Product -->
+      <section class="product">
+        <div class="product__title">
+          <h2 class="product__subtitle">ToCoToCo Menu</h2>
+          <div class="product__heading">SẢN PHẨM NỔI BẬT</div>
+          <img
+            class="product__line"
+            src="assets/imgs/home_line.webp"
+            alt="line"
+          />
+        </div>
+
+        <div class="product__list grid">
+          <div class="row">
+            <div class="product_card col xl-3 m-6 c-6">
+              <img
+                src="assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="ảnh OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+              />
+              <div class="product_card_info">
+                <h3 class="product-title">Ô LONG KEM TƯƠI HOÀNG GIA</h3>
+                <div class="product-price">
+                  <div class="product-price-origin">25,000đ</div>
+                  <div class="product-price-sale">34,000đ</div>
+                </div>
+                <button class="product-btn">Đặt Hàng</button>
+              </div>
+            </div>
+            <div class="product_card col xl-3 m-6 c-6">
+              <img
+                src="assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="ảnh OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+              />
+              <div class="product_card_info">
+                <h3 class="product-title">Ô LONG KEM TƯƠI HOÀNG GIA</h3>
+                <div class="product-price">
+                  <div class="product-price-origin">25,000đ</div>
+                  <div class="product-price-sale">34,000đ</div>
+                </div>
+                <button class="product-btn">Đặt Hàng</button>
+              </div>
+            </div>
+            <div class="product_card col xl-3 m-6 c-6">
+              <img
+                src="assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="ảnh OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+              />
+              <div class="product_card_info">
+                <h3 class="product-title">Ô LONG KEM TƯƠI HOÀNG GIA</h3>
+                <div class="product-price">
+                  <div class="product-price-origin">25,000đ</div>
+                  <div class="product-price-sale">34,000đ</div>
+                </div>
+                <button class="product-btn">Đặt Hàng</button>
+              </div>
+            </div>
+            <div class="product_card col xl-3 m-6 c-6">
+              <img
+                src="assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="ảnh OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+              />
+              <div class="product_card_info">
+                <h3 class="product-title">Ô LONG KEM TƯƠI HOÀNG GIA</h3>
+                <div class="product-price">
+                  <div class="product-price-origin">25,000đ</div>
+                  <div class="product-price-sale">34,000đ</div>
+                </div>
+                <button class="product-btn">Đặt Hàng</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="product_card col xl-3 m-6 c-6">
+              <img
+                src="assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="ảnh OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+              />
+              <div class="product_card_info">
+                <h3 class="product-title">Ô LONG KEM TƯƠI HOÀNG GIA</h3>
+                <div class="product-price">
+                  <div class="product-price-origin">25,000đ</div>
+                  <div class="product-price-sale">34,000đ</div>
+                </div>
+                <button class="product-btn">Đặt Hàng</button>
+              </div>
+            </div>
+            <div class="product_card col xl-3 m-6 c-6">
+              <img
+                src="assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="ảnh OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+              />
+              <div class="product_card_info">
+                <h3 class="product-title">Ô LONG KEM TƯƠI HOÀNG GIA</h3>
+                <div class="product-price">
+                  <div class="product-price-origin">25,000đ</div>
+                  <div class="product-price-sale">34,000đ</div>
+                </div>
+                <button class="product-btn">Đặt Hàng</button>
+              </div>
+            </div>
+            <div class="product_card col xl-3 m-6 c-6">
+              <img
+                src="assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="ảnh OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+              />
+              <div class="product_card_info">
+                <h3 class="product-title">Ô LONG KEM TƯƠI HOÀNG GIA</h3>
+                <div class="product-price">
+                  <div class="product-price-origin">25,000đ</div>
+                  <div class="product-price-sale">34,000đ</div>
+                </div>
+                <button class="product-btn">Đặt Hàng</button>
+              </div>
+            </div>
+            <div class="product_card col xl-3 m-6 c-6">
+              <img
+                src="assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="ảnh OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+              />
+              <div class="product_card_info">
+                <h3 class="product-title">Ô LONG KEM TƯƠI HOÀNG GIA</h3>
+                <div class="product-price">
+                  <div class="product-price-origin">25,000đ</div>
+                  <div class="product-price-sale">34,000đ</div>
+                </div>
+                <button class="product-btn">Đặt Hàng</button>
+              </div>
+            </div>
+          </div>
+          <button class="product__list-btn">Xem Tất Cả</button>
+        </div>
+      </section>
+
+      <!-- Banner -->
+      <section class="banner wide">
+        <div class="banner__item">
+          <img src="aboutus-home.jpg" alt="banner" />
+          <div class="banner__info banner__info--right">
+            <h2 class="banner__subtitle">ToCoToCo Story</h2>
+            <h3 class="banner__title">Về Chúng Tôi</h3>
+            <img
+              class="product__line"
+              src="assets/imgs/home_line.webp"
+              alt="line"
+            />
+            <p class="banner__desc">
+              Bên cạnh niềm tự hào về những ly trà sữa ngon – sạch – tươi, chúng
+              tôi luôn tự tin mang đến khách hàng những trải nghiệm tốt nhất về
+              dịch vụ và không gian.
+            </p>
+            <button class="banner__btn">XEM THÊM</button>
+          </div>
+        </div>
+
+        <div class="banner__item">
+          <img src="fc_toco.jpeg" alt="banner" />
+          <div class="banner__info banner__info--left">
+            <h2 class="banner__subtitle">ToCoToCo Franchise</h2>
+            <h3 class="banner__title">Nhượng Quyền</h3>
+            <img
+              class="product__line"
+              src="assets/imgs/home_line.webp"
+              alt="line"
+            />
+            <p class="banner__desc">
+              Gia nhập đế chế 300 TRIỆU USD. Nếu bạn bắt đầu kinh doanh khởi
+              nghiệp ẩm thực, hoặc muốn đầu tư vào lĩnh vực này, thương hiệu
+              ToCoToCo chắc chắn sẽ là một lựa chọn đáng cân nhắc cho bạn.
+            </p>
+            <button class="banner__btn">XEM THÊM</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section class="news wide">
+        <div class="product__title">
+          <h2 class="product__subtitle">Tin Tức và Khuyến Mãi</h2>
+          <div class="product__heading">
+            KHÁM PHÁ TOCOTOCO NHẬN NGAY KHUYẾN MÃI
+          </div>
+          <img
+            class="product__line"
+            src="assets/imgs/home_line.webp"
+            alt="line"
+          />
+        </div>
+
+        <div class="news__main">
+          <div class="news__col">
+            <div class="lastest-news">
+              <a href="">
+                <img src="assets/imgs/WEBSITE-1.jpg" alt="" />
+                <div class="new-content">
+                  <h2>🍓 COMBO 2 HỘP THẠCH chỉ 59K🍑</h2>
+                  <p>
+                    🍓Deal ngon chỉ TP. HCM! 🍑 Ăn vặt sao thiếu được Thạch
+                    ToCoToCo xịn từ trong ra ngoài: ✨ 15% thịt quả tươi ✨
+                    Không chất tạo ngọt tổng hợp […]
+                  </p>
+                </div>
+              </a>
+            </div>
+            <ul class="home-news-list">
+              <li class="home-news-item">
+                <a href="">
+                  <img src="zalo-oa.jpg" alt="" />
+                  <div class="news-content">
+                    <h3>MỘC SEN – VỊ XƯA VIBE NAY</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="home-news-item">
+                <a href="">
+                  <img src="Website-back-to-cool.jpg" alt="" />
+                  <div class="news-content"><h3>Back to School</h3></div>
+                </a>
+              </li>
+              <li class="home-news-item">
+                <a href="">
+                  <img src="Untitled-3-04-1.png" alt="" />
+                  <div class="news-content">
+                    <h3>VỊ TỰ HÀO – TÔI ❤️ VIỆT NAM</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="home-news-item">
+                <a href="">
+                  <img src="SPF.jpg" alt="" />
+                  <div class="news-content"><h3>Over Đậu</h3></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="news__col">
+            <div class="lastest-news">
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/Q4eLrTkAnJ0"
+                title="YouTube video player"
+              >
+              </iframe>
+              <div class="news-content">
+                <h3>
+                  ƯỚP HƠN 40 TIẾNG, TRÀ XANH NHÀI ORGANIC SẼ CÓ HƯƠNG THƠM ĐẶC
+                  BIỆT THẾ NÀO?
+                </h3>
+              </div>
+            </div>
+            <ul class="home-news-list-right">
+              <li class="home-news-item-right">
+                <iframe
+                  width="40%"
+                  src="https://www.youtube.com/embed/qhwPaHo0Tx8"
+                  title="YouTube video player"
+                >
+                </iframe>
+                <div class="news-content-item">
+                  <h3>
+                    CON ĐƯỜNG KHỞI NGHIỆP CỦA NGƯỜI SÁNG LẬP THƯƠNG HIỆU TRÀ SỮA
+                    VIỆT NAM - TOCOTOCO
+                  </h3>
+                </div>
+              </li>
+              <li class="home-news-item-right">
+                <iframe
+                  width="40%"
+                  src="https://www.youtube.com/embed/-lEWuY-9v4o"
+                  title="YouTube video player"
+                >
+                </iframe>
+                <div class="news-content-item">
+                  <h3>
+                    TOCOTOCO - TOP 5 THƯƠNG HIỆU UY TÍN CHẤT LƯỢNG QUỐC GIA NĂM
+                    2023
+                  </h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="assets/js/include.js"></script>
+    <script>
+      const slider = document.querySelector(".home__hero-slider");
+      const slides = document.querySelectorAll(".home__hero-slide");
+      const prev = document.querySelector(".hero-prev");
+      const next = document.querySelector(".hero-next");
+      let index = 0;
+
+      function showSlide(i) {
+        index = (i + slides.length) % slides.length;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      next.addEventListener("click", () => showSlide(index + 1));
+      prev.addEventListener("click", () => showSlide(index - 1));
+
+      // Tự động chuyển ảnh mỗi 5 giây
+      setInterval(() => showSlide(index + 1), 10000);
+    </script>
+  </body>
+</html>
