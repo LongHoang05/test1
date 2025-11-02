@@ -200,6 +200,8 @@ button i:hover {
   font-size: 38px;
   font-weight: 700;
   color: #282828;
+  display: block;
+    margin-bottom: 15px;
 }
 .jobSection__text span {
   display: block;
@@ -212,7 +214,7 @@ button i:hover {
 /* ---------Banner section---------- */
 .Banner__about {
   margin-top: 80px;
-  background-image: url(img_Recruit/about-banner-main.jpg);
+  background-image: url(../../imgs/img_Recruit/about-banner-main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -271,6 +273,7 @@ button i:hover {
   letter-spacing: 1.4px;
   font-weight: 600;
   text-transform: uppercase;
+  line-height: 24px;
 }
 .About__container__row__content__info p {
   font-size: 14px;

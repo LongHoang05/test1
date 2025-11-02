@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tuyển dụng - ToCoToCo Tea</title>
-
+    <base href="http://127.0.0.1:5500/ToCoToCoFake/" />
     <!-- CSS -->
-    <link rel="stylesheet" href="Recruit.css" />
-    <link rel="stylesheet" href="Responsive.css" />
+    <link rel="stylesheet" href="assets/css/layout/Recruit.css" />
+    <link rel="stylesheet" href="assets/css/layout/Responsive.css" />
+    <link rel="stylesheet" href="assets/css/base.css">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <script defer src="assets/js/include.js"></script>
     <!-- Icons -->
     <script
       src="https://kit.fontawesome.com/e71869efc4.js"
@@ -30,7 +31,7 @@
       <div class="navbar__container" id="nav__container">
         <div class="navbar__container--brand">
           <a class="navbar-brand" href="#">
-            <img src="img_Recruit/logo.png" alt="ToCoToCo Logo" />
+            <img src="assets/imgs/img_Recruit/logo.png" alt="ToCoToCo Logo" />
           </a>
         </div>
         <button class="navbar__menu__toggler" id="hamburger" type="button">
@@ -51,10 +52,10 @@
       <div class="Slider__images--item">
         <div class="Slider__main">
           <div class="Slider__images--bx img__active">
-            <img src="img_Recruit/slideshow1_1.jpg" alt="Cơ hội nghề nghiệp" />
+            <img src="assets/imgs/img_Recruit/slideshow1_1.jpg" alt="Cơ hội nghề nghiệp" />
           </div>
           <div class="Slider__images--bx">
-            <img src="img_Recruit/slideshow1_2.jpg" alt="Cơ hội nghề nghiệp" />
+            <img src="assets/imgs/img_Recruit/slideshow1_2.jpg" alt="Cơ hội nghề nghiệp" />
           </div>
         </div>
         <div class="Slider__content">
@@ -87,7 +88,7 @@
       <div class="jobSection__text">
         <p class="jobSection__text__subtitile">Vị trí tuyển dụng</p>
         <h3 class="jobSection__text__titile">Các vị trí hiện tại</h3>
-        <img src="img_Recruit/logoimgrecruitment.png" alt="Logo Tuyển dụng" />
+        <img src="assets/imgs/img_Recruit/logoimgrecruitment.png" alt="Logo Tuyển dụng" />
         <span>
           Chúng tôi luôn tìm kiếm những người tuyệt vời! Nếu bạn chưa tìm thấy
           cơ hội phù hợp hiện tại, nhưng tin rằng bạn có thể trở thành một phần
@@ -102,7 +103,7 @@
       <div class="Banner__about__backgroud--overlay"></div>
       <div class="Banner__about__container container">
         <div class="Banner__about__content">
-          <img src="img_Recruit/imgiconbanner.png" alt="About Banner" />
+          <img src="assets/imgs/img_Recruit/imgiconbanner.png" alt="About Banner" />
           <p class="Banner__about__content--description">
             “ToCoToCo với tâm huyết lấy nông sản Việt Nam làm nguồn nguyên liệu
             chính, dùng nông sản Việt tạo ra những ly đồ uống mang <br />
@@ -139,7 +140,7 @@
               </p>
             </div>
             <div class="About__container__row__content--img">
-              <img src="img_Recruit/1.jpg" alt="Lịch sử phát triển ToCoToCo" />
+              <img src="assets/imgs/img_Recruit/1.jpg" alt="Lịch sử phát triển ToCoToCo" />
             </div>
           </div>
         </div>
@@ -149,7 +150,7 @@
           <div class="About__container__row__content row__content__right">
             <div class="About__container__row__content--img">
               <img
-                src="img_Recruit/2.jpg"
+                src="assets/imgs/img_Recruit/2.jpg"
                 alt="Khác biệt đến từ những điều đơn giản nhất"
               />
             </div>
@@ -188,7 +189,7 @@
             </div>
             <div class="About__container__row__content--img">
               <img
-                src="img_Recruit/3.jpg"
+                src="assets/imgs/img_Recruit/3.jpg"
                 alt="ToCoToCo – Nhiều hơn cả một ly đồ uống"
               />
             </div>
@@ -230,6 +231,7 @@
         </div>
       </div>
     </div>
+    <footer id="footer"></footer>
     <!-- Scroll Effect -->
     <script>
       window.addEventListener("scroll", () => {
