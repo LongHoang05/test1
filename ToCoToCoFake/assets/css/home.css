@@ -383,3 +383,69 @@
     width: 60%;
   }
 }
+/* -------------ANIMATION----------------- */
+/* Hiệu ứng nút lên xuống nhỏ */
+@keyframes up_down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-18px); }
+}
+
+.btn-up_down {
+  background: url(../imgs/logo/ic_scoll.webp) center / contain no-repeat;
+  height: 32px;
+  animation: up_down 0.5s infinite alternate;
+}
+
+/* --- CARD CHÍNH --- */
+.product__card {
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.product__card-img {
+  overflow: hidden;
+}
+
+/* --- ẢNH --- */
+.product__card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* --- THÔNG TIN --- */
+.product__card-info h3,
+.product__card-info .product__price,
+.product__card-info .product__btn {
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+/* Mặc định: vị trí ban đầu */
+.product__card-info h3,
+.product__card-info .product__price {
+  top: 40px;
+  font-size: 2rem;
+}
+
+.product__price .product__price--sale {
+  font-size: 1.9rem;
+}
+
+.product__card-info .product__btn {
+  top: 80px;
+}
+
+/* --- HIỆU ỨNG HOVER --- */
+.product__card:hover img {
+  transform: scale(1.2);
+}
+
+.product__card:hover h3,
+.product__card:hover .product__price {
+  transform: scale(0.9) translateY(-40px);
+}
+
+.product__card:hover .product__btn {
+  transform: translateY(-80px);
+}
