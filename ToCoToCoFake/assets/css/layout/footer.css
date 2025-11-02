@@ -1,7 +1,7 @@
 #footer {
   position: relative;
   bottom: 0;
-  background-image: url(/assets/imgs/footer/ft_bg_img.png);
+  background-image: url(../../imgs/footer/ft_bg_img.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
