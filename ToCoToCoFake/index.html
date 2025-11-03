@@ -415,6 +415,15 @@
 
       // Tự động chuyển ảnh mỗi 5 giây
       setInterval(() => showSlide(index + 1), 10000);
+
+      window.addEventListener("scroll", () => {
+        const header = document.getElementById("header");
+        if (window.scrollY > 100) {
+          header.classList.add("active");
+        } else {
+          header.classList.remove("active");
+        }
+      });
     </script>
   </body>
 </html>
