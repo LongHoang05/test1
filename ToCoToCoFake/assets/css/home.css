@@ -387,8 +387,12 @@
 /* -------------ANIMATION----------------- */
 /* Hiệu ứng nút lên xuống nhỏ */
 @keyframes up_down {
-  0% { transform: translateY(16px); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 .btn-up_down {
@@ -449,4 +453,39 @@
 
 .product__card:hover .product__btn {
   transform: translateY(-80px);
+}
+/* --------NEWS ANIMATION---------- */
+.news__wall {
+  width: 100%;
+  overflow: hidden;
+}
+.news__ani {
+  transition: all 0.5s ease;
+}
+.news__ani img {
+  transition: all 0.5s ease;
+}
+.news__ani iframe {
+  transition: all 0.5s ease;
+}
+.news__ani:hover {
+  box-shadow: 3.5px 6px 18px 0 rgb(0 0 0 / 40%);
+}
+.news__ani:hover img {
+  transform: scale(1.1);
+}
+.news__ani:hover iframe {
+  transform: scale(1.1);
+}
+.news__wall--right {
+  min-width: 180px;
+  max-width: 180px;
+  overflow: hidden;
+}
+.news__wall--right iframe {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+.news__wall--right iframe:hover {
+  transform: scale(1.1);
 }
