@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../../../../../../Downloads/components"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "tocofake-of-duong"
+  }
+}

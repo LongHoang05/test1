@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- reset -->
+    <link rel="stylesheet" href="./assets/css/reset-news.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/style-news.css" />
+
+    <!-- responsive -->
+    <link rel="stylesheet" href="./assets/css/responsive-news.css" />
+    <title>Tin Tức TocoToco</title>
+  </head>
+  <body>
+    <!-- header -->
+    <!-- <header id="header">
+      <div class="header__container">
+        <a href="#"
+          ><img
+            class="header__img"
+            src="./assets/img/logo-toco.png"
+            alt="ảnh logo"
+        /></a>
+
+        <nav class="header__navbar-pc">
+          <ul class="header__navbar-list">
+            <li class="header__navbar-item header__navbar-item-intro">
+              <a
+                class="header__navbar-link header__navbar-link-underline"
+                href=""
+                >Giới Thiệu</a
+              ><i class="header__navbar-item-icon fa-solid fa-chevron-down"></i>
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__item-link" href="/lich_su_va_su_menh.html"
+                    >Lịch Sử và Sứ Mệnh</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a class="header__item-link" href="/thanh_tuu.html"
+                    >Thành Tựu Đạt Được</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="header__navbar-item">
+              <a
+                class="header__navbar-link header__navbar-link-underline"
+                href=""
+                >Sản Phẩm</a
+              >
+            </li>
+            <li class="header__navbar-item">
+              <a
+                class="header__navbar-link header__navbar-link-underline"
+                href=""
+                >Tin Tức</a
+              >
+            </li>
+            <li class="header__navbar-item">
+              <a
+                class="header__navbar-link header__navbar-link-underline"
+                href=""
+                >Cửa Hàng</a
+              >
+            </li>
+            <li class="header__navbar-item">
+              <a
+                class="header__navbar-link header__navbar-link-underline"
+                href=""
+                >Tuyển Dụng</a
+              >
+            </li>
+            <li class="header__navbar-item">
+              <a
+                class="header__navbar-link header__navbar-link-underline"
+                href=""
+                >Nhượng Quyền</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__btn-list">
+          <a href="" class="header__btn">Đăng Ký</a>
+          <a href="" class="header__btn">Đăng Nhập</a>
+        </div>
+
+        <nav class="header__navbar-moblie">
+          <label for="input-check-mobile" class="header__navbar-mobile-btn">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+
+          <input type="checkbox" hidden id="input-check-mobile" />
+
+          <label for="input-check-mobile" class="header__overlay"></label>
+
+          <ul class="header__navbar-mobile-list">
+            <label for="input-check-mobile"
+              ><i class="header__icon-close fa-solid fa-xmark"></i
+            ></label>
+            <li
+              class="header__navbar-mobile-item header__navbar-mobile-item-intro"
+            >
+              <input type="checkbox" hidden id="input-intro-check" />
+              <label for="input-intro-check" class="header__navbar-mobile-link"
+                >Giới Thiệu
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <ul class="header__list-mobile">
+                <li class="header__item-mobile">
+                  <a
+                    class="header__item-link-mobile"
+                    href="/lich_su_va_su_menh.html"
+                    >Lịch Sử và Sứ Mệnh</a
+                  >
+                </li>
+                <li class="header__item-mobile">
+                  <a class="header__item-link-mobile" href="/thanh_tuu.html"
+                    >Thành Tựu Đạt Được</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="header__navbar-mobile-item">
+              <a class="header__navbar-mobile-link" href="">Sản Phẩm</a>
+            </li>
+            <li class="header__navbar-mobile-item">
+              <a class="header__navbar-mobile-link" href="">Tin Tức</a>
+            </li>
+            <li class="header__navbar-mobile-item">
+              <a class="header__navbar-mobile-link" href="">Cửa Hàng</a>
+            </li>
+            <li class="header__navbar-mobile-item">
+              <a class="header__navbar-mobile-link" href="">Tuyển Dụng</a>
+            </li>
+            <li class="header__navbar-mobile-item">
+              <a class="header__navbar-mobile-link" href="">Nhượng Quyền</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+
+    <!-- main -->
+    <main id="main">
+      <!-- main__img -->
+      <img src="./assets/img/slide-page.png" alt="" class="main__img" />
+
+      <!-- main__content -->
+      <div class="main-content">
+        <div class="main__nav">
+          <h1>DANH MỤC TIN TỨC</h1>
+          <!-- main__nav--list -->
+          <div class="main__nav--list">
+            <a
+              href="https://tocotocotea.com/category/blogs/cau-chuyen-thuong-hieu/"
+              >CÂU CHUYỆN THƯƠNG HIỆU</a
+            >
+            <a href="https://tocotocotea.com/category/blogs/tin-tuc-khuyen-mai/"
+              >TIN TỨC KHUYẾN MẠI</a
+            >
+            <a href="https://tocotocotea.com/category/blogs/su-kien/"
+              >SỰ KIỆN</a
+            >
+            <a
+              href="https://tocotocotea.com/category/blogs/nhuong-quyen-tocotoco/"
+              >NHƯỢNG QUYỀN TOCOTOCO</a
+            >
+          </div>
+
+          <!-- main__nav--key-word -->
+          <div class="main__nav--key-word">
+            <h1>Từ khóa</h1>
+            <button>TocoToco</button>
+            <button>Seminar</button>
+            <button>Over đậu</button>
+          </div>
+        </div>
+
+        <!-- main__news -->
+        <div class="main__news">
+          <h1>TIN TỨC</h1>
+          <div class="main__news--content">
+            <!-- item1 -->
+            <div class="main__news--item">
+              <img src="./assets/img/vietnam.png" alt="" />
+              <div class="main__news--title">
+                <h2>
+                  VỊ TỰ HÀO - TÔI
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="14px"
+                    viewBox="0 -960 960 960"
+                    width="14px"
+                    fill="#ff0000"
+                  >
+                    <path
+                      d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Z"
+                    />
+                  </svg>
+                  VIỆT NAM
+                </h2>
+              </div>
+              <div class="main__news--desc">
+                Hành trình hơn 11 năm, ToCoToCo đã cùng bạn đi qua những buổi
+                hẹn hò ngọt ngào, những ngày làm việc mệt nhoài hay cả những
+                khoảnh khắc sẻ chia […]
+              </div>
+              <button>Xem thêm</button>
+            </div>
+
+            <!-- item2 -->
+            <div class="main__news--item">
+              <img src="./assets/img/zalo-oa.jpg" alt="" />
+              <div class="main__news--title">
+                <h2>MỘC SEN - VỊ XƯA VIBE NAY</h2>
+              </div>
+              <div class="main__news--desc">
+                Không cần cầu kỳ để nổi bật. Có những thứ chỉ cần mộc mạc, tinh
+                khiết – là đủ khiến người ta say. ToCoToCo mang hương sen Việt
+                bước vào […]
+              </div>
+              <button>Xem thêm</button>
+            </div>
+
+            <!-- item3 -->
+            <div class="main__news--item">
+              <img src="./assets/img/Website-back-to-cool.jpg" alt="" />
+              <div class="main__news--title">
+                <h2>
+                  [CHẤN ĐỘNG] COMBO BACK TO SCHOOL SIÊU KHỔNG LỒ chỉ từ 47K
+                </h2>
+              </div>
+              <div class="main__news--desc">
+                vì TOCOTOCO TẶNG THÊM VOUCHER 10K khi quan tâm Zalo OA ToCoToCo
+                Trà sữa đậm vị mát lạnh, topping ngập ly, thạch giòn giòn chốt
+                nhanh “combo back to school” […]
+              </div>
+              <button>Xem thêm</button>
+            </div>
+
+            <!-- item4 -->
+            <div class="main__news--item">
+              <img src="./assets/img/backtochsool-1.jpg" alt="" />
+              <div class="main__news--title">
+                <h2>BACK TO SCHOOL – COMBO SIÊU HỌC ĐƯỜNG</h2>
+              </div>
+              <div class="main__news--desc">
+                Đi học có hội bạn thân, ăn no – uống đã – giá học sinh đã có
+                combo back to school ToCoToCo Hà Nội: Combo 59K: 1 ly […]
+              </div>
+              <button>Xem thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main__pages -->
+      <div class="main__pages">
+        <span>1</span>
+        <a href="">2</a>
+        <span>...</span>
+        <a href="">34</a>
+        <a href="">>></a>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <!-- <footer id="footer">
+      <div class="footer__container">
+        <div class="footer-top">
+          <section class="footer__logo">
+            <img
+              class="footer__logo-img"
+              src="./assets/img/ft_logo.png"
+              alt="footer logo img"
+            />
+          </section>
+
+          <section class="footer__info">
+            <h4 class="footer__title">Công ty CP TM & Dv Taco Việt Nam</h4>
+            <ul class="footer__info-list">
+              <li class="footer__info-item">
+                <i class="footer__icon fa-solid fa-location-pin"></i>
+                Trụ sở chính: Tầng 5 tòa Tower 1, KĐT Times City, 458 Minh Khai,
+                phường Vĩnh Tuy, quận Hai Bà Trưng, Hà Nội.
+              </li>
+              <li class="footer__info-item">
+                <i class="footer__icon fa-solid fa-location-pin"></i>
+                Chi nhánh miền nam: 40B Nguyễn Văn Đậu, Q.Bình Thạnh, Tp. Hồ Chí
+                Minh
+              </li>
+              <li class="footer__info-item">
+                <i class="footer__icon fa-solid fa-phone"></i>
+                1900.63.69.36
+              </li>
+              <li class="footer__info-item">
+                <i class="footer__icon fa-solid fa-envelope"></i>
+                info@tocotocotea.com
+              </li>
+              <li class="footer__info-item">
+                Số ĐKKD: 0106341306. Ngày cấp: 16/03/2017.
+              </li>
+              <li class="footer__info-item">
+                Nơi cấp: Sở kế hoạch và Đầu tư Thành phố Hà Nội.
+              </li>
+              <li class="footer__info-item">
+                <ul class="footer__social-list">
+                  <li class="footer__social-item">
+                    <a href="">
+                      <i class="footer__icon fa-brands fa-square-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="">
+                      <i class="footer__icon fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="">
+                      <i class="footer__icon fa-brands fa-youtube"></i>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="">
+                      <i class="footer__icon fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="">
+                      <i class="footer__icon fa-brands fa-google-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__info-item">
+                <ul class="footer__img-list">
+                  <li class="footer__img-item">
+                    <img src="./assets/img/googleplay.png" alt="gg img" />
+                  </li>
+                  <li class="footer__img-item">
+                    <img src="./assets/img/appstore.png" alt="appstore img" />
+                  </li>
+                  <li class="footer__img-item">
+                    <img
+                      src="./assets/img/bo_cong_thuong_grande.png"
+                      alt="chứng nhận img"
+                    />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section class="footer__about-us">
+            <h4 class="footer__title">Về chúng tôi</h4>
+            <ul class="footer__about-us-list">
+              <li class="footer__about-us-item">
+                <a class="footer__link" href="">Giới thiệu về TocoToco</a>
+              </li>
+              <li class="footer__about-us-item">
+                <a class="footer__link" href="">Nhượng quyền</a>
+              </li>
+              <li class="footer__about-us-item">
+                <a class="footer__link" href="">Tin tức khuyến mại</a>
+              </li>
+              <li class="footer__about-us-item">
+                <a class="footer__link" href="">Quy định chung</a>
+              </li>
+              <li class="footer__about-us-item">
+                <a class="footer__link" href="">TT liên hệ & ĐKKD</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="footer__policy">
+            <h4 class="footer__title">Chính sách</h4>
+            <ul class="footer__policy-list">
+              <li class="footer__policy-item">
+                <a class="footer__link" href=""> Chính sách thành viên </a>
+              </li>
+              <li class="footer__policy-item">
+                <a class="footer__link" href="">Hình thức thanh toán</a>
+              </li>
+              <li class="footer__policy-item">
+                <a class="footer__link" href="">Vận chuyển giao nhận</a>
+              </li>
+              <li class="footer__policy-item">
+                <a class="footer__link" href="">Đổi trả và hoàn tiền</a>
+              </li>
+              <li class="footer__policy-item">
+                <a class="footer__link" href="">Bảo vệ thông tin cá nhân</a>
+              </li>
+              <li class="footer__policy-item">
+                <a class="footer__link" href="">Bảo trì, bảo hành</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="footer-bottom">
+          <div class="footer-bottom-left">
+            ToCoToCo - Thương hiệu trà sữa tiên phong sử dụng nguồn nông sản
+            Việt Nam
+          </div>
+          <div class="footer-bottom-right">
+            Copyrights © 2019 by ToCoToCoTea. All rights reserved.
+          </div>
+        </section>
+      </div>
+      <div class="footer__cover"></div>
+    </footer> -->
+
+    <script src="news.js"></script>
+  </body>
+</html>
