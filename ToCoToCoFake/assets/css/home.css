@@ -1,3 +1,8 @@
+#header {
+  position: absolute;
+  background-color: transparent;
+}
+
 /* ========== HOME ========== */
 .home {
   padding-bottom: 50px;
